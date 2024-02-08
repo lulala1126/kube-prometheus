@@ -20,6 +20,12 @@ spec:
       app.kubernetes.io/name: alertmanager
       app.kubernetes.io/part-of: kube-prometheus
       app.kubernetes.io/version: 0.26.0
+  alertmanagerConfigSelector:
+    matchLabels:
+      alertmanagerConfig: custom
+  alertmanagerConfigNamespaceSelector:
+    matchLabels:
+      allowAlertmanagerConfig: custom
   replicas: 3
   resources:
     limits:
